@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace ConsolePacman
 {
@@ -15,7 +16,7 @@ namespace ConsolePacman
             char[,] map = ReadMap("map.txt");
             Console.CursorVisible = false;
             int pacmanX = 1, pacmanY = 1;
-            int score = 0;
+            int score = 0;           
             ConsoleKeyInfo pressedKey = new ConsoleKeyInfo();
             Task.Run(() =>
             {
@@ -27,6 +28,11 @@ namespace ConsolePacman
 
             while (true)
             {
+                if (getMaxScores(map, '*') == 0)
+                {
+                    MessageBox.Show("YOU WIN! \n\nGame Over");
+                    break;
+                }
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Blue;
                 DrawMap(map);
@@ -42,6 +48,7 @@ namespace ConsolePacman
 
 
                 HandleInput(pressedKey, ref pacmanX, ref pacmanY, map,ref score);
+
             }
 
 
@@ -76,7 +83,17 @@ namespace ConsolePacman
             {
                 for (int x = 0; x < map.GetLength(0); x++)
                 {
+                    if (map[x, y] == '*')
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;                    
+                    }
+                    if (map[x, y] == '#')
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;                   
+                    }
+                    
                     Console.Write(map[x, y]);
+                    
                 }
                 Console.WriteLine();
             }
@@ -120,6 +137,20 @@ namespace ConsolePacman
             }
             return direction;
         }
+        private static int getMaxScores(char[,] map, char symbol)
+        {
+            int maxScore = 0;
+            foreach (char c in map)
+            {
+                if (c == symbol) {
+                    maxScore++;
+                }
+            }
+            return maxScore;
+        }
+        
+
+        
     }
 
 
