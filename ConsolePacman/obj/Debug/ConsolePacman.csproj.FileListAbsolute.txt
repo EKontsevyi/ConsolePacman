@@ -1,0 +1,8 @@
+C:\Users\flexi\source\repos\ConsolePacman\ConsolePacman\bin\Debug\ConsolePacman.exe.config
+C:\Users\flexi\source\repos\ConsolePacman\ConsolePacman\bin\Debug\ConsolePacman.exe
+C:\Users\flexi\source\repos\ConsolePacman\ConsolePacman\bin\Debug\ConsolePacman.pdb
+C:\Users\flexi\source\repos\ConsolePacman\ConsolePacman\obj\Debug\ConsolePacman.csproj.AssemblyReference.cache
+C:\Users\flexi\source\repos\ConsolePacman\ConsolePacman\obj\Debug\ConsolePacman.csproj.SuggestedBindingRedirects.cache
+C:\Users\flexi\source\repos\ConsolePacman\ConsolePacman\obj\Debug\ConsolePacman.csproj.CoreCompileInputs.cache
+C:\Users\flexi\source\repos\ConsolePacman\ConsolePacman\obj\Debug\ConsolePacman.exe
+C:\Users\flexi\source\repos\ConsolePacman\ConsolePacman\obj\Debug\ConsolePacman.pdb
